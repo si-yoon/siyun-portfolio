@@ -12,11 +12,11 @@ $(function () {
   });
 
   // resume
-  $(".resume li").click(function(){
-		$(this).children("div").slideToggle()
-		$(this).siblings().children("div").slideUp();
-		$(this).toggleClass("on").siblings().removeClass("on")
-	});
+  $(".resume li").click(function () {
+    $(this).children("div").slideToggle()
+    $(this).siblings().children("div").slideUp();
+    $(this).toggleClass("on").siblings().removeClass("on")
+  });
 
   // chart
   $('.chart').easyPieChart({
@@ -72,7 +72,4 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
-// 배경 호버
-
-// 배경 호버
 
