@@ -6,6 +6,9 @@ $(function () {
   $('.bg3 a').click(function () {
     $('.pop2').fadeIn();
   });
+  $('.bg4 a').click(function () {
+    $('.pop3').fadeIn();
+  });
 
   $('.popup a').click(function () {
     $('.popup').fadeOut();
