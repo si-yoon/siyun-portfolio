@@ -227,18 +227,18 @@ section {
 }
 
 .text_wrap p {
-	color:#ccc;
+	color: #ccc;
 	line-height: 2;
 }
 
-.dark{
-	color: #555 !important; 
+.dark {
+	color: #555 !important;
 
 }
 
 .text a {
 	display: inline-block;
-	margin: 2em 0 1em ;
+	margin: 2em 0 1em;
 	padding: 0.5em 1em;
 	font-size: 1rem;
 	border: 1px solid #333;
@@ -334,12 +334,18 @@ section {
 /* 비디오 배경 */
 
 .bg2::before {
-	background: url(../images/2.jpg) no-repeat center top;
+	background: url(../images/unknown_logo.png) no-repeat center top;
 	background-size: cover;
+	background-color: #fff;
 }
 
 .bg3::before {
-	background: url(../images/3.jpg) no-repeat center top;
+	background: url(../images/greener03.jpeg) no-repeat center top;
+	background-size: cover;
+}
+
+.bg4::before {
+	background: url(../images/blue.jpg) no-repeat center top;
 	background-size: cover;
 }
 
@@ -450,31 +456,59 @@ section {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(12px);
 	z-index: 1000;
 	display: none;
+	overflow: auto;
+	box-sizing: border-box;
 }
+
 
 .popup_in {
 	width: 80%;
+	height: 70%;
+	max-width: 1320px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 50px 0;
+
 }
+
+.popup_in p {
+	margin: 2vh auto 5vh;
+	color: #eee;
+	font-size: 1.1rem;
+	line-height: 1.3;
+}
+
 
 .popup_in img {
 	display: block;
 	width: 100%;
-	max-width: 500px;
-	margin: auto;
+	max-width: 1000px;
+	margin: 2vh auto 0;
 }
 
-.popup a {
+.popup_in .main{
+	margin-top: 1vh;
+}
+
+.close:after {
+	content: "\00d7";
+	font-size: 50pt;
+	line-height: 35px;
 	position: absolute;
 	top: 50px;
 	right: 50px;
 	color: #fff;
-	font-size: 2rem;
+}
+
+iframe {
+	display: block;
+	margin: 2vh auto;
 }
 
 
@@ -488,6 +522,10 @@ section {
 .about h1 {
 	font-size: 2rem;
 	padding-bottom: 0.2em;
+}
+
+.about p {
+	font-size: 1.2rem;
 }
 
 .about h1:not(:first-child) {
@@ -647,9 +685,7 @@ section {
 	.brand h2 {
 		font-size: 5vw;
 	}
-	
+
 }
 
 /* 570px */
-
-
