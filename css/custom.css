@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 * {
 	margin: 0;
 	padding: 0;
@@ -18,6 +20,13 @@ body {
 	line-height: 1.2;
 	color: #333;
 }
+
+/* 드래그 */
+::selection {
+	color: #eee;
+	background: #333;
+}
+/* 드래그 */
 
 /* 세로 스크롤 */
 body::-webkit-scrollbar {
@@ -492,7 +501,7 @@ section {
 	margin: 2vh auto 0;
 }
 
-.popup_in .main{
+.popup_in .main {
 	margin-top: 1vh;
 }
 
@@ -530,6 +539,23 @@ iframe {
 
 .about h1:not(:first-child) {
 	padding-top: 2em;
+}
+
+.bigger {
+	font-size: 1.5rem;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+/* 마커 */
+.mark, .bigger {
+	background:linear-gradient(to right, rgba(255,255,255,0) 50%, #f3be00 50%);
+	background-size:200%;
+	transition:.35s;
+}
+.mark:hover, .bigger:hover{
+	background-position:-100% 0;
+	color: #000;
 }
 
 /* resume */
