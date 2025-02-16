@@ -2,241 +2,304 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEE_IYUN_portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <!-- favi -->
+    <link rel="icon" href="./img/favicon.png">
     <!-- font -->
     <link href="https://webfontworld.github.io/pretendard/Pretendard.css" rel="stylesheet">
-    <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
-
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link href="./css/custom.css" rel="stylesheet" type="text/css">
-
-    <!-- favi -->
-    <link rel="icon" href="./images/favi.png">
+    <!-- css style -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 </head>
 
 <body>
-    <!-- header -->
-    <header>
-        <div class="nav">
-            <input type="checkbox" id="menuicon">
-            <label for="menuicon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <div class="sidebar">
-                <ul>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./about.html">about</a></li>
-                </ul>
+    <!-- Preloader -->
+    <!-- <div id="preloader"> 
+        <div id="status">
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
             </div>
-
         </div>
+    </div> -->
+    <!-- ./Preloader -->
+
+    <!-- header -->
+    <header class="navbar-fixed-top">
+        <nav>
+            <ul>
+                <li><a href="#hello">Hello</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#artwork">Artworks</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
     </header>
     <!-- ./header -->
 
-    <!-- section -->
-    <section>
+    <!-- home -->
+    <div class="section" id="home" data-stellar-background-ratio="0.5" style="background-position: 0px 0px;">
+        <div class="container">
+            <video src="./video/intro_page_v.mp4" autoplay loop muted playsinline class="intro_page_v">Your browser does
+                not support the video tag.</video>
+            <video src="./video/intro_page_v_m.mp4" autoplay loop muted playsinline class="intro_page_v_m">Your browser
+                does not support the video tag.</video>
+        </div>
+    </div>
+    <!-- ./home -->
 
-        <!-- text -->
-        <div class="text">
+    <!-- hello -->
+    <div class="section" id="hello">
+        <div class="container">
+            <h1>About me</h1>
+            <div class="con_box1">
+                <div class="col-md-6 about-img-div">
+                    <img src="./img/mino_2.png" width="400" class="img-responsive" alt="" data-aos="fade-right"
+                        data-aos-delay="0">
+                </div>
 
-            <div class="text_wrap">
-                <h1>desgin</h1>
-                <h6>PORTFOLIO</h6>
-                <h3>LEE SIYUN</h3>
-                <p>DESIGNER</p>
+                <div class="col-md-6" data-aos="fade-up">
+                    <h3><span class="highlight">도전을 두려워하지 않는</span> 신입 디자이너입니다.</h3>
 
-                <p class="dark">
-                    ● Email : unxpdls1528@naver.com <br>
-                    ● Tel : 010-4095-0460
+                    <p class="about_txt">
+                        저는 새로운 도전과 학습을 통해 끊임없이 성장하는 디자이너입니다. <br><br>
+
+                        "부족함을 인정하고 보완해 나가는 성장형 디자인" 철학을 바탕으로,
+                        저는 실천을 통해 발전하는 과정을 중요하게 생각합니다. 다양한 경험을 통해
+                        트렌드와 여러 타겟층을 위한 디자인을 접하며 그 가치의 중요성을 더욱 깊이
+                        이해하게 되었습니다. <br><br>
+
+                        제가 추구하는 디자인은 섬세하고 감각적이며 유연한 디자인으로,
+                        사용자의 니즈에 맞춰 트렌드를 이끄는 것입니다. 단순한 시각적 요소를 넘어서,
+                        사용자와의 상호작용을 통해 더 깊은 가치를 전달해야 한다고 생각합니다. <br><br>
+
+                        <b>
+                            앞으로도 끊임없이 도전하며,
+                            다양한 경험을 통해 대체할 수 없는 디자이너로 성장해 나가겠습니다.
+                        </b>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./hello -->
+
+    <!-- projects -->
+    <div class="section" id="project">
+        <div class="container-fluid">
+            <!-- main container -->
+            <div class="main-container portfolio-inner clearfix">
+                <!-- portfolio div -->
+                <div class="portfolio-div">
+                    <div class="portfolio">
+                        <!-- portfolio_container -->
+                        <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
+
+                            <!-- single work -->
+                            <div class="row brand1">
+                                <div class="video-container">
+                                    <video src="./video/ouresti_bg_v.mp4" autoplay loop muted playsinline
+                                        class="project_v1">Your browser does not support the video tag.</video>
+                                    <video src="./video/ouresti_bg_v2_2.mp4" autoplay loop muted playsinline
+                                        class="project_v1_2">Your browser does not support the video tag.</video>
+
+
+                                    <div class="item_info1">
+                                        <h3>ouresti</h3>
+                                        <p>프리미엄 감성 티 브랜드 'ouresti'</p>
+                                        <div class="project_btn_box">
+                                            <a href="https://si-yoon.github.io/ouresti/index.html" target="_blank" class="project_btn">Homepage</a>
+                                            <a href="./guide/ouresti_bx.html" target="_blank"class="project_btn">BI&BX Guide</a>
+                                            <a href="./guide/ouresti_web.html" target="_blank" class="project_btn">Web Guide</a>
+                                            <!-- <a href="#" target="_blank" class="project_btn">Prototype</a> -->
+                                            <a href="./ebook/ouresti_Ebook/ebook_ouresti.html" target="_blank" class="project_btn">E-book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end single work -->
+
+                            <!-- single work -->
+                            <div class="row brand2">
+                                <div class="video-container">
+                                    <video src="./video/bley_bg_v.mp4" autoplay loop muted playsinline
+                                        class="project_v2">Your browser does not support the video tag.</video>
+                                    <video src="./video/bley_bg_v_m.mp4" autoplay loop muted playsinline
+                                        class="project_v2_2">Your browser does not support the video tag.</video>
+
+
+                                    <div class="item_info2">
+                                        <h3 class="b_title">BLEY</h3>
+                                        <p class="b_p">심층 해양 수로 만든 스킨케어 'BLEY'</p>
+                                        <div class="project_btn_box">
+                                            <a href="https://si-yoon.github.io/BLEY/" target="_blank" class="project_btn2">Homepage</a>
+                                            <a href="./guide/bley_bx.html" target="_blank" class="project_btn2">BI&BX Guide</a>
+                                            <a href="./guide/bley_web.html" target="_blank" class="project_btn2">Web Guide</a>
+                                            <a href="https://xd.adobe.com/view/62b4376e-fe0c-42da-b5f7-f5fc742c8648-37e7/" target="_blank" class="project_btn2">Prototype</a>
+                                            <a href="./ebook/bley_ebook/ebook_bley.html" target="_blank" class="project_btn2">E-book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end single work -->
+
+                        </div>
+                        <!-- end portfolio_container -->
+                    </div>
+                    <!-- portfolio -->
+                </div>
+                <!-- end portfolio div -->
+            </div>
+            <!-- end main container -->
+        </div>
+    </div>
+    <!-- ./projects -->
+
+    <!-- artwork -->
+    <div class="section" id="artwork">
+        <div class="container">
+            <div class="col-md-12" data-aos="fade-up">
+                <h1 class="col_md_12_h1">Artworks</h1>
+                <div class="col-md-4">
+                    <a href="./ebook/logo_Ebook/logo_ebook.html" target="_blank"><img src="./img/logo_thu.jpg" alt="logo thumbnail" class="art1"></a>
+                </div>
+                <div class="col-md-4 m-1">
+                    <a href="./ebook/graphic_Ebook/graphic_ebook.html" target="_blank"><img src="./img/graphic_thu.jpg" alt="graphic thumbnail" class="art2"></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./ebook/ceramics_Ebook/ceramics_ebook.html" target="_blank"><img src="./img/ceramics_thu.jpg" alt="ceramics thumbnail" class="art3"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./artwork -->
+
+    <!-- skill -->
+    <div class="section" id="resume">
+        <div class="container">
+            <div class="col-md-12" data-aos="fade-up">
+                <h1>Skills</h1>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6" data-aos="fade-up">
+                <div class="chart" data-percent="95" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="title"><b>95%</b> <br> Photoshop</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6" data-aos="fade-up">
+                <div class="chart" data-percent="95" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="title"><b>95%</b> <br> Illustrator</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6" data-aos="fade-up">
+                <div class="chart" data-percent="95" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="title"><b>95%</b> <br> InDesign</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6" data-aos="fade-up">
+                <div class="chart" data-percent="88" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="title"><b>88%</b> <br> HTML /CSS /JS</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6" data-aos="fade-up">
+                <div class="chart" data-percent="75" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="title"><b>75%</b> <br> XD / Figma</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6" data-aos="fade-up">
+                <div class="chart" data-percent="75" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="title"><b>75%</b> <br> Pr / Ae</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./skill -->
+
+    <!-- experience  -->
+    <div class="section" id="experience">
+        <div class="container">
+            <div class="col-md-12">
+                <h1>My road</h1>
+            </div>
+
+            <div class="col-md-12">
+                <ul class="timeline">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <img src="img/license.png" alt="license">
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up">
+                        <img src="img/experience.png" alt="experience">
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up">
+                        <img src="img/education.png" alt="education">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ./experience -->
+
+    <!-- contact -->
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="contact_h1">Contact Me:&#41;</h1>
+                <p>
+                    I hope we have the opportunity to work together. <br>
+                    Wishing you all the best
                 </p>
-                <a href="./about.html">about me</a>
             </div>
 
-        </div>
-        <!-- ./text -->
-
-        <!-- portfolio -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-
-                <!-- ouresti -->
-                <div class="swiper-slide bg1">
-                    <!-- 비디오 -->
-                    <div class="video_container">
-                        <video autoplay muted loop playsinline>
-                            <source src="./video/Com_3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                    <!-- a태그 -->
-                    <ul>
-                        <li><a href="https://si-yoon.github.io/ouresti/index.html" target="_blank">Homepage</a></li>
-                        <li><a href="./guide/ouresti_bx.html" target="_blank">BI&BX Guide</a></li>
-                        <li><a href="./guide/ouresti_web.html" target="_blank">Web Guide</a></li>
-                        <li><a href="./ebook/ouresti_Ebook/ebook_ouresti.html" target="_blank">E-book</a></li>
-                        <!-- <li><a href="#">Mobile Design</a></li>
-                        <li><a href="#">Video</a></li> -->
-                    </ul>
-
-                    <!-- 제목 -->
-                    <div class="brand">
-                        <div class="brand_in">
-                            <h2>ouresti</h2>
-                            <p>Apr.-Jul. 2024</p>
-                            <!-- <p>프리미엄 홍차 브랜드</p> -->
-                        </div>
-                    </div>
+            <div class="icon_box">
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./img/phone_icon.png" alt="phone icon">
+                    <h3>Phone</h3>
+                    <p>+82 10-4095-0460</p>
                 </div>
-
-                <!-- bley -->
-                <div class="swiper-slide bg1">
-                    <!-- 비디오 -->
-                    <div class="video_container">
-                        <video autoplay muted loop playsinline>
-                            <source src="./video/bley.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                    <!-- a태그 -->
-                    <ul>
-                        <li><a href="https://si-yoon.github.io/BLEY/" target="_blank">Homepage</a></li>
-                        <li><a href="./guide/bley_bx.html" target="_blank">BI&BX Guide</a></li>
-                        <li><a href="./guide/bley_web.html" target="_blank">Web Guide</a></li>
-                        <li><a href="./ebook/bley_ebook/ebook_bley.html" target="_blank">E-book</a></li>
-                        <!-- <li><a href="#">Mobile Design</a></li>
-                        <li><a href="#">Video</a></li> -->
-                    </ul>
-
-                    <!-- 제목 -->
-                    <div class="brand">
-                        <div class="brand_in">
-                            <h2>BLEY</h2>
-                            <p>Jul. 2024</p>
-                            <!-- <p>심층해양수 스킨케어</p> -->
-                        </div>
-                    </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./img/email_icon.png" alt="email icon">
+                    <h3>Email</h3>
+                    <p>enxhrl99@gmail.com</p>
                 </div>
-
-
-                <!-- 아트워크 -->
-                <div class="swiper-slide bg2">
-                    <ul>
-                        <li><a href="#none">Artwork</a></li>
-                    </ul>
-                    <div class="brand">
-                        <div class="brand_in">
-                            <h2>Artwork</h2>
-                            <p>Jan.-Oct. 2023</p>
-                        </div>
-                    </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <img src="./img/location_icon.png" alt="location icon">
+                    <h3>Location</h3>
+                    <p>Busan, South Korea</p>
                 </div>
-
-                <!-- 아트워크 -->
-                <div class="swiper-slide bg3">
-                    <ul>
-                        <li><a href="#none">Artwork</a></li>
-                    </ul>
-                    <div class="brand">
-                        <div class="brand_in">
-                            <h2>Artwork</h2>
-                            <p>Apr. 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 아트워크
-                <div class="swiper-slide bg4">
-                    <ul>
-                        <li><a href="#none">Artwork</a></li>
-                    </ul>
-                    <div class="brand">
-                        <div class="brand_in">
-                            <h2>Artwork</h2>
-                            <p>Aug.-Sep. 2021</p>
-                        </div>
-                    </div>
-                </div> -->
-
             </div>
-
-            <div class="swiper-scrollbar"></div>
         </div>
-        <!-- ./portfolio -->
-
-    </section>
-    <!-- ./section -->
-
-    <!-- copy -->
-    <p class="copy">ⓒCopyright All rights reserved | This template is made with by LEE SIYUN</p>
-    <!-- ./copy -->
-
-      <!-- artwork popup1 -->
-      <div class="popup pop1">
-        <div class="popup_in">
-            <img src="./images/logo.jpg" alt="미지의 세계 로고 안내1">
-            <img src="./images/logo2.jpg" alt="미지의 세계 로고 안내2">
-            <img src="./images/logo3.jpg" alt="미지의 세계 로고 안내3">
-            <img src="./images/logo4.jpg" alt="미지의 세계 로고 안내4">
-            <img src="./images/logo5.jpg" alt="미지의 세계 로고 안내5">
-          
-        </div>
-        <a href="#none" class="close">x</a>
     </div>
-    <!-- ./artwork popup2 -->
+    <!-- ./contact -->
 
-    <!-- artwork popup2 -->
-    <div class="popup pop2">
-        <div class="popup_in">
-            <img src="./images/greener_m.jpg" alt="그리너 앨범 커버" class="main">
-
-            <img src="./images/greener_add.jpg" alt="그리너">
-
-
-            <iframe width="100%" height="630px"
-                src="https://www.youtube.com/embed/aT-XGyZytLI?si=wkHyBrcdDS_z9J6J&amp;controls=0"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-            <p>
-                2023. 04. 20 <br>
-                유호 님의 'Greener' 곡 커버에 참여하였습니다.
-            </p>
-
-        </div>
-        <a href="#none" class="close">x</a>
+    <!-- footer -->
+    <div class="section" id="footer">
+        ⓒ Copyright <span class="copy_bold">SIYUN LEE</span>. All Rights Reserved
     </div>
-    <!-- ./artwork popup2 -->
+    <!-- ./contact -->
 
-    <!-- artwork popup3 -->
-    <!-- <div class="popup pop3">
-        <div class="popup_in">
-            <img src="./images/blue_m.jpg" alt="파란_ 포스터">
-            <img src="./images/blue.jpg" alt="파란_ 포스터">
-
-            <p>
-                2021.08.17 ~ 2021.09.17 <br>
-                '기획단체 0'에서 진행하는 파란_ 전시 포스터 제작에 참여하였습니다.
-            </p>
-        </div>
-        <a href="#none" class="close">x</a>
-    </div> -->
-    <!-- ./artwork popup3 -->
+    <!-- top btn -->
+    <a href="#" class="top_btn"><img src="./img/top_btn.png" alt="top button"></a>
+    <!-- ./top btn -->
 
 
-    <!-- js -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src='./script/custom.js'></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!--  plugins  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--  main script  -->
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
