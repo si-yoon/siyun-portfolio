@@ -8,28 +8,27 @@ body {
 }
 
 /* 버튼 */
-.btn_1 {
-	list-style: none;
+.top_btn_box{
 	position: fixed;
-	bottom: 50px;
-	right: 50px;
-	text-align: center;
-	z-index: 100;
-	display: inline-block;
-	padding: 1em 3em;
-	border-radius: 2em;
-	box-shadow: 2px 2px 5px rgba(151, 79, 79, 0.3);
-	background: #fff;
-	border: 2px solid #416072;
-	color: #416072;
-	font-weight: bold;
-	text-decoration: none;
+	bottom: 20px;
+	right: 20px;
+	transition: .5s;
+	z-index: 1000;
 }
 
-.btn_1:hover{
-	background-color: #416072;
-	color: #fff;
+.top_btn_box>img{ 
+	width: 80px;
+	height: 80px;
 }
+
+.top_btn{
+	position: absolute;
+}
+
+.top_btn:hover{
+	opacity: 0;
+}
+/* 버튼 */
 
 .magazine-viewport .container {
 	position: absolute;
