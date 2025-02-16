@@ -36,28 +36,6 @@
             padding: 0;
         }
 
-        a {
-            text-decoration: none;
-            color: #733232;
-            display: block;
-            position: fixed;
-            bottom: 50px;
-            right: 50px;
-            font-size: 25px;
-            font-weight: 900;
-            padding: 17px 10px;
-            border-radius: 50%;
-            border: #733232 5px solid;
-            background-color: #fff;
-            transition: .5s;
-        }
-
-        a:hover{
-            background-color: #733232;
-            color: #fff;
-        }
-
-
         body {
             background-color: #ded7d3;
         }
@@ -68,6 +46,33 @@
             width: 100%;
             max-width: 1320px;
         }
+
+        .top_btn{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .top_btn:hover{
+            animation: btn .5s linear alternate;
+        }
+
+        @keyframes btn {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        .top_btn>img{
+            width: 100px;
+            height: 100px;
+        }
     </style>
 </head>
 
@@ -76,7 +81,7 @@
     <img src="./img/WED_GUIDE-02.jpg" alt="WED_GUIDE-02">
     <img src="./img/WED_GUIDE-03.jpg" alt="WED_GUIDE-03">
 
-    <a href="#">TOP</a>
+    <a href="#"class="top_btn"><img src="./img/ouresti_top_btn.png" alt="top button" ></a>
 </body>
 
 </html>

@@ -36,27 +36,32 @@
             padding: 0;
         }
 
-        a {
-            text-decoration: none;
-            color: #733232;
-            display: block;
+        .top_btn{
             position: fixed;
-            bottom: 50px;
-            right: 50px;
-            font-size: 25px;
-            font-weight: 900;
-            padding: 17px 10px;
-            border-radius: 50%;
-            border: #733232 5px solid;
-            background-color: #fff;
-            transition: .5s;
+            bottom: 20px;
+            right: 20px;
         }
 
-        a:hover{
-            background-color: #733232;
-            color: #fff;
+        .top_btn:hover{
+            animation: btn .5s linear alternate;
         }
 
+        @keyframes btn {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        .top_btn>img{
+            width: 100px;
+            height: 100px;
+        }
 
         body {
             background-color: #ded7d3;
@@ -78,7 +83,7 @@
     <img src="./img/BIBX_GUIDE_03.jpg" alt="BIBX_GUIDE_03">
     <img src="./img/BIBX_GUIDE_04.jpg" alt="BIBX_GUIDE_04">
 
-    <a href="#">TOP</a>
+    <a href="#"class="top_btn"><img src="./img/ouresti_top_btn.png" alt="top button" ></a>
 </body>
 
 </html>

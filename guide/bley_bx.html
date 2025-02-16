@@ -35,38 +35,38 @@
             margin: 0;
             padding: 0;
         }
-
-        a {
-            text-decoration: none;
-            color: #416072;
-            display: block;
-            position: fixed;
-            bottom: 50px;
-            right: 50px;
-            font-size: 25px;
-            font-weight: 900;
-            padding: 17px 10px;
-            border-radius: 50%;
-            border: #416072 5px solid;
-            background-color: #fff;
-            transition: .5s;
-        }
-
-        a:hover{
-            background-color: #416072;
-            color: #fff;
-        }
-
-
+        
         body {
             background-color: #c2d1d8;
         }
 
+        
         img {
             display: block;
             margin: auto;
             width: 100%;
             max-width: 1320px;
+        }
+        
+        /* top btn */
+        .top_btn_box{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            transition: .5s;
+        }
+        
+        .top_btn_box>img{ 
+            width: 80px;
+            height: 80px;
+        }
+
+        .top_btn{
+            position: absolute;
+        }
+        
+        .top_btn:hover{
+            opacity: 0;
         }
     </style>
 </head>
@@ -78,7 +78,10 @@
     <img src="./img/BX03.jpg" alt="BIBX_GUIDE_03">
     
 
-    <a href="#">TOP</a>
+    <a href="#" class="top_btn_box">
+        <img src="./img/bley_top_btn.png" alt="top button" class="top_btn">
+        <img src="./img/bley_top_btn_hover.png" alt="top button hover">
+    </a>
 </body>
 
 </html>
