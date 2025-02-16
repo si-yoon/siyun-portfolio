@@ -1,0 +1,748 @@
+@charset "utf-8";
+
+/* General
+==================================================*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url(../img/cursor.png) 8 12, auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: #333;
+}
+
+body {
+    font-family: 'Pretendard' !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333;
+}
+
+/* 드래그 */
+::selection {
+    color: #333;
+    background: #ffce00;
+}
+/* 드래그 */
+
+/* 스크롤 */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ffce00;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px grey;
+}
+
+
+/* preloader
+==================================================*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #121212;
+    z-index: 10000
+}
+
+#status,
+.preloader {
+    top: 50%;
+    left: 50%;
+    position: absolute
+}
+
+#status {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -50px 0 0 -50px
+}
+
+.preloader {
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    margin-left: -20px
+}
+
+.preloader:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 100%;
+    width: 100%;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    border: 2px solid #ffce00;
+    border-top: 2px solid transparent;
+    border-radius: 100%
+}
+
+.preloader>.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 25px;
+    width: 10.6px;
+    margin-top: -12.5px;
+    margin-left: -5.3px;
+    -webkit-animation: wink 1s ease-in-out infinite alternate;
+    animation: wink 1s ease-in-out infinite alternate
+}
+
+@media only screen and (min-width:768px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+
+    .preloader:before {
+        left: -2px;
+        top: -2px;
+        border-width: 2px
+    }
+
+    .preloader>.icon {
+        height: 37.5px;
+        width: 15.9px;
+        margin-top: -18.75px;
+        margin-left: -7.95px
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .preloader {
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px
+    }
+
+    .preloader>.icon {
+        height: 50px;
+        width: 21.2px;
+        margin-top: -25px;
+        margin-left: -10.6px
+    }
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@-webkit-keyframes wink {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes wink {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/* Header
+==================================================*/
+
+header {
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    height: 60px;
+}
+
+nav ul {
+    display: inline-block;
+    padding-left: 0;
+    list-style: none;
+    padding: 20px;
+    margin-bottom: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav li a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.bg-nav {
+    background: #fff;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.bg-nav ul {
+    padding: 10px 0;
+}
+
+a:focus {
+    color: #ffce00;
+}
+
+nav li:hover a {
+    color: #ffce00;
+    text-decoration: none;
+}
+
+a.active {
+    color: #ffce00;
+}
+
+
+/* home section
+==================================================*/
+#home {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#home .intro_page_v {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+#home .intro_page_v_m {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* hello section
+==================================================*/
+
+#hello {
+    padding: 100px 0;
+    background: #fff;
+}
+
+#hello h1{
+    margin: 0;
+}
+
+#hello p{
+    font-size: 18px;
+}
+
+/* 형광펜 효과 */
+.highlight {
+    background: linear-gradient(to right, #ffce00 50%, transparent 50%) 100% 0;
+    background-size: 200%;
+    transition: all 1s;
+}
+
+.on {
+    background-position-x: 0;
+}
+/* 형광펜 효과 */
+
+
+#hello .con_box1{
+    display: flex;
+    align-items: center;
+}
+
+.about-img-div{
+    text-align: center;
+}
+
+.about-img-div img {
+    display: block;
+    margin: 30px auto 0;
+}
+
+
+
+/* projects section
+==================================================*/
+
+/* 전체 화면을 덮는 스타일 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* .video-container가 화면 전체를 차지하게 */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 화면을 가득 채우도록 설정 */
+    overflow: hidden;
+}
+
+/* video를 화면 크기에 맞게 조정하면서 중앙에 위치 */
+video.project_v1, video.project_v2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 영상의 중앙을 화면의 중앙에 맞춤 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 영상이 화면을 꽉 채우도록 크기 조정, 비율을 유지 */
+    overflow: hidden;
+}
+
+/* 텍스트와 버튼 스타일 */
+.item_info1, .item_info2 {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: #eee;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+/* 호버시 fade-in/out 효과 */
+.video-container:hover .item_info1{
+    opacity: 1;
+}
+.video-container:hover .item_info2{
+    opacity: 1;
+}
+
+/* 버튼 스타일 */
+.project_btn_box {
+    margin-top: 10px;
+}
+
+.project_v1:hover, .item_info1 h3, .item_info1 p{
+    cursor: url(../img/cursor2.png) 8 12, auto;
+}
+
+.project_btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #eee;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: url(../img/cursor2.png) 8 12, auto;
+}
+
+.project_btn2 {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: url(../img/cursor2.png) 8 12, auto;
+}
+
+.b_title{
+    color: #415f71;
+}
+
+.b_p{
+  color: #333;
+}
+
+.project_btn:hover, .project_btn2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 각각의 프로젝트 영역 */
+.brand1, .brand2 {
+    width: 100%;
+    height: 100%;
+}
+
+/* 화면 크기 조정 */
+@media screen and (max-width: 768px) {
+    .item_info {
+        bottom: 20px;
+        left: 10px;
+    }
+
+    .project_btn, .project_btn2{
+        padding: 8px 16px;
+    }
+}
+
+/* 비디오m */
+.project_v1_2, .project_v2_2{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 영상의 중앙을 화면의 중앙에 맞춤 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 영상이 화면을 꽉 채우도록 크기 조정, 비율을 유지 */
+    overflow: hidden;
+}
+
+
+
+/* artwork section
+==================================================*/
+#artwork {
+    padding: 100px 0;
+    margin: 100px auto;
+}
+
+.col_md_12_h1{
+    margin-bottom: 50px;
+}
+
+#artwork img {
+    display: block;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+#artwork a:hover img{
+    transform: translateY(-5px);
+    box-shadow: none;
+}
+
+
+/* skill section
+==================================================*/
+#resume {
+    padding: 100px 0;
+    background: url(../img/skill_contact_bg.png) no-repeat;
+    background-size: cover;
+    color: #eee;
+}
+
+#resume h1{
+    margin-bottom: 30px;
+    color: #ffce00;
+}
+
+
+.chart {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart span.title {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chart span.title b {
+    font-size: 20px;
+}
+
+
+/* experience section
+==================================================*/
+
+#experience {
+    padding: 100px 0;
+    background: #fff;
+}
+#experience h1{
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.timeline{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.timeline li{
+    padding-left: 25px;
+}
+
+.timeline li img{
+    width: 100%;
+}
+
+
+/* contact
+==================================================*/
+
+#contact {
+    padding: 50px 0 100px;
+    background: url(../img/skill_contact_bg.png) no-repeat;
+    background-size: cover;
+    color: #eee;
+    line-height: 1.3;
+}
+
+.contact_h1{
+    color: #ffce00;
+    margin-bottom: -3px;
+}
+
+.col-md-12>p{
+    margin-bottom: 80px;
+}
+
+.icon_box img{
+    width: 62px;
+    height: 62px;
+}
+
+#contact .col-md-4 {
+    text-align: center;
+}
+
+.icon_box{
+    line-height: 0.2;
+}
+
+
+
+/* footer
+==================================================*/
+
+#footer {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.copy_bold{
+    font-weight: 900;
+}
+
+/* top btn
+==================================================*/
+.top_btn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 100;
+}
+
+.top_btn img {
+    width: 80px;
+    height: 80px;
+}
+
+.top_btn:hover {
+    animation: h_btn 0.4s linear alternate;
+}
+
+@keyframes h_btn {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* Responsive media queries
+==================================================*/
+
+@media (max-width: 991px) {
+    .portfolio .categories-grid .categories ul li a {
+        padding: 0 2px;
+    }
+
+    .project_btn, .project_btn2{
+        margin: 2px 0.5px;
+    }
+
+    .m-1 {
+        margin: 1em 0;
+    }
+
+    #hello{
+        padding: 50px 0;
+    }
+    
+    #hello .con_box1{
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .icon_box>.col-md-4{
+        margin-bottom: 80px;
+    }
+
+    .timeline{
+        display: block;
+        text-align: center;
+    }
+
+    .timeline li{
+        margin-bottom: 50px;
+    }
+    
+    .timeline li img{
+        width: 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-event-copy {
+        width: 90%;
+        left: 2em;
+    }
+
+    video.project_v1, video.project_v2{
+        display: none;
+    }
+
+    .project_v1_2, .project_v2_2{
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-fixed-top {
+        display: none;
+    }
+
+    .popup>div {
+        width: 80%;
+    }
+    .top_btn{
+        display: none;
+    }
+    h3{
+        font-size: 20px;
+    }
+    #home .intro_page_v {
+        display: none;
+    }
+
+    #home .intro_page_v_m {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-family: 'Pretendard';
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    #home,
+    .disply-table {
+        height: 600px;
+    }
+
+    .portfolio .categories-grid .categories ul li {
+        list-style: none;
+        margin: 10px 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 374px) {
+    .about-border {
+        display: none;
+    }
+
+    .chart span.title {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
